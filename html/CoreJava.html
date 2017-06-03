@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Java</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/index.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/index.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navigation">
+    </div>
+
+    <div class="container">
+    <div class="pg-header">
+
+      </div>
+      <div class="row">
+			<div class="col-md-8">
+				<h3> Introduction</h3>
+
+				<div class="details">
+					Java is a object oriented and platform independent language. In Java 8, functional programming has been introducted.
+					Java is very powerful server side programming language and it is a very popular language.
+
+				</div>
+				<div class="emptyspace">
+				</div>
+				<h4>Code Example </h4>
+				<div class="codeblock"><textarea name="code" class="java">
+
+package com.codedecimals.java;
+
+import java.util.*;
+
+/**
+***********************************************
+*This Program deals with Sum of two arrays
+***********************************************
+**/
+
+public class ArraySum {
+
+		public static void main(String[] args)
+		{
+
+      //Declaring an array of integers
+			int[] x={2,4,3,1,8,7,6,9};
+			System.out.print("Array is: " );
+
+      //Iterate through the array
+			for(int i=0;i<x.length;i++)
+			{
+				System.out.print(x[i] + " ");
+			}
+			System.out.println();
+			System.out.println(x.length);
+
+			int sum=0;
+
+      //Add the array of integers through iteration
+
+			for(int i=0;i<x.length;i++)
+			{
+				sum=sum+x[i];
+			}
+
+			System.out.println("The sum of array elements is: " + sum);
+		}
+
+}
+
+</textarea></div>
+      </div>
+
+	  <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module">
+			<div class="sidebar-module-inside">
+            <h4>Topics</h4>
+			<div class="list-group">
+			  <a href="#" class="list-group-item active">
+				Introduction
+			  </a>
+			  <a href="#" class="list-group-item list-group-item-action">Oops concepts</a>
+			  <a href="#" class="list-group-item list-group-item-action">Multithreading</a>
+			  <a href="#" class="list-group-item list-group-item-action">Networking</a>
+			  <a href="#" class="list-group-item list-group-item-action">JSP</a>
+			  <a href="#" class="list-group-item list-group-item-action">Servlets</a>
+			  <a href="#" class="list-group-item list-group-item-action">SPRING</a>
+			  <a href="#" class="list-group-item list-group-item-action">Hibernate</a>
+			  <a href="#" class="list-group-item list-group-item-action">RESTful</a>
+			</div>
+          </div>
+          </div>
+        </div><!-- /.blog-sidebar -->
+	  </div>
+	        <nav>
+            <ul class="pager">
+                <li><a href="#">Next</a></li>
+            </ul>
+          </nav>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <footer class="footer">
+    <div class="container">
+      <div class="foot_text text-center">
+
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-google-plus"></i></a>
+        <a href="#"><i class="fa fa-skype"></i></a>
+        <span id ="copyright"> <span id="year"></span>&nbsp;Copyright CodeDecimals</span>
+      </div>
+      </div>
+    </footer>
+  </body>
+</html>
