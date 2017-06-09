@@ -45,4 +45,9 @@ if(titleval == 'Programs') {
 
 var year = new Date();
 $('#year').append(year.getFullYear());
+
+$(".list-group .list-group-item").click(function(e) {
+   $(".list-group .list-group-item").removeClass("active");
+   $(e.target).addClass("active");
+});
 });
