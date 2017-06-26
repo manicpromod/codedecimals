@@ -43,6 +43,10 @@ if(titleval == 'Programs') {
 	$('#testm').addClass("active");
 }
 
+
+
+//footer changes
+$('.footertag').append('<footer class="footer"> <div class="container"> <div class="foot_text" style="text-align: center"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-skype"></i></a><span id ="copyright">© <span id="year"></span>&nbsp;Copyright CodeDecimals</span></div></div></footer>')
 //Date year append in the footer
 var year = new Date();
 $('#year').append(year.getFullYear());
@@ -51,7 +55,4 @@ $(".list-group .list-group-item").click(function(e) {
    $(".list-group .list-group-item").removeClass("active");
    $(e.target).addClass("active");
 });
-
-//footer changes
-$('.footertag').append('<footer class="footer"> <div class="container"> <div class="foot_text" style="text-align: center"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-google-plus"></i></a><a href="#"><i class="fa fa-skype"></i></a><span id ="copyright"> <span id="year"></span>&nbsp;Copyright CodeDecimals</span></div></div></footer>')
 });
