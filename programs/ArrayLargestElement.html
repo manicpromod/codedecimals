@@ -10,7 +10,8 @@
 
 
     <title>Programs</title>
- <!-- Bootstrap core CSS -->
+
+   <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -29,13 +30,13 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
     <script src="../js/index.js"></script>
-</head>
 
+    </head>
 
-<body>
-<div class="navigation">
-</div>
+    <body>
 
+      <div class="navigation">
+      </div>
 
     <div class="container">
     <div class="pg-header">
@@ -47,48 +48,64 @@
 
 		<div class="program1">
 
-            <h2>To reverse a given number using corejava</h2><br>
-			    <div class="codeblock"><textarea name="code" class="java"  readonly width="800" height="800">
+            <h3>largest element in a array</h3><br>
+			    <div class="codeblock"><textarea name="code" class="java" readonly>
 
 package com.codedecimals;
 
-import java.util.Scanner;
+public class ArrayLargestNumber
 
-public class NumberReverse {
+{
 
-  public static void main(String[] args)
-  {
-    Scanner s=new Scanner(System.in);
-    int x,y;
+    public static void main(String[] args)
 
-
-    System.out.print("Enter the number: ");
-    x=s.nextInt();
-    y=x;
-
-    int reverse=0;
-    int temp=1;
-
-    int count=0;
-
-    while(x>0)
     {
-      x=x/10;
-      count++;
+
+        // initialize the array
+        int[] x = {
+            1,
+            3,
+            5,
+            7,
+            8,
+            6,
+            4,
+            2
+        };
+        System.out.println(x.length);
+
+        for (int i = 0; i < x.length; i++) {
+            System.out.print(x[i] + " ");
+        }
+
+        System.out.println();
+
+        int largeNumber = 0;
+        int i;
+
+        // compare the first two elements to initialize the largeNumber and based on that compare the largeNumber with every element of the array
+        for (i = 0; i < x.length - 1; i++) {
+            if (i == 0) {
+                if (x[i] > x[i + 1]) {
+                    largeNumber = x[i];
+                    continue;
+                }
+                else {
+                    largeNumber = x[i + 1];
+                    continue;
+                }
+            }
+
+            if (largeNumber < x[i + 1]) {
+                largeNumber = x[i + 1];
+                continue;
+            }
+
+        }
+
+        System.out.println("The largest number in the array is: " + largeNumber);
+
     }
-
-    for(int i=0;i<count;i++)
-    {
-      reverse=(reverse*10)+y%10;
-      y=y/10;
-      temp=temp*10;
-
-
-    }
-
-    System.out.println("The reverse of the number " + x + " is: " + reverse);
-  }
-
 
 }
 

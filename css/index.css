@@ -1,5 +1,7 @@
 body {
   padding-top: 50px;
+  height: 100%;
+ margin: 0;
 }
 .starter-template {
   padding: 40px 15px;
@@ -118,4 +120,10 @@ footer a {
 img {
   height:100%;
   width:100%;
+}
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: none;
 }

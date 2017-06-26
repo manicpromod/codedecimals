@@ -10,7 +10,8 @@
 
 
     <title>Programs</title>
- <!-- Bootstrap core CSS -->
+
+   <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -36,7 +37,6 @@
 <div class="navigation">
 </div>
 
-
     <div class="container">
     <div class="pg-header">
 
@@ -47,50 +47,42 @@
 
 		<div class="program1">
 
-            <h2>To reverse a given number using corejava</h2><br>
-			    <div class="codeblock"><textarea name="code" class="java"  readonly width="800" height="800">
+            <h2>to display 1 11 111 1111..</h2><br>
+			    <div class="codeblock"><textarea name="code" class="java" readonly>
 
 package com.codedecimals;
 
 import java.util.Scanner;
 
-public class NumberReverse {
-
-  public static void main(String[] args)
-  {
-    Scanner s=new Scanner(System.in);
-    int x,y;
-
-
-    System.out.print("Enter the number: ");
-    x=s.nextInt();
-    y=x;
-
-    int reverse=0;
-    int temp=1;
-
-    int count=0;
-
-    while(x>0)
+public class DecimalPoint {
+    
+    public static void main(String[] args)
     {
-      x=x/10;
-      count++;
+        
+        int number=1;
+        int x;
+        Scanner s=new Scanner(System.in);
+        
+        // get the input from the user
+        
+        System.out.print("Enter the series: " );
+        x=s.nextInt();
+        int temp=1;
+        
+        for(int i=0;i<x;i++)
+        {
+            System.out.println(number);
+            number=number+(temp*10);
+            temp=temp*10;
+        }
+        
+    
+        
+        
     }
-
-    for(int i=0;i<count;i++)
-    {
-      reverse=(reverse*10)+y%10;
-      y=y/10;
-      temp=temp*10;
-
-
-    }
-
-    System.out.println("The reverse of the number " + x + " is: " + reverse);
-  }
-
 
 }
+
 
 
 </textarea></div>

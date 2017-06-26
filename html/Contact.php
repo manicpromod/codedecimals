@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-     
+
 
     <title>Contact</title>
 
@@ -30,27 +30,47 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
 	  <script src="../js/index.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
   </head>
+  <?php
+  if(isset($_POST['submit']))
+  {
+    $name=$_POST['name'];
+    $from=$_POST['email'];
+    $to="manicpromod@gmail.com";
+    $subject=$_POST['subject'];
+    $message=$_POST['message'];
+    $headers  = "MIME-Version: 1.0\r\n";
+    $headers .= "Content-type: text/html; charset=UTF-8\r\n";
+    $headers .= "From: <".$from. ">" ;
+    $body = "From: $name\n E-Mail: $email\n Message:\n $message";
+    if(mail($to,$subject,$message,$headers)) {
+    $result='<div class="alert alert-success">Thank You! I will be in touch</div>';
+    } else {
+    $result='<div class="alert alert-failure">Sorry the mail is not sent</div>';
+    }
+  }
 
+   ?>
   <body>
 
      <div class="navigation">
     </div>
   <div class="container">
     <div class="cg-header">
-             
-        
+
+
       </div>
     <div class="row">
         <div class="col-md-8">
             <div class="well well-sm">
-                <form>
+                <form method="post" action="Contact.php">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
                             <label for="name">
                                 Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter name" required="required" />
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" required="required" />
                         </div>
                         <div class="form-group">
                             <label for="email">
@@ -58,7 +78,7 @@
                             <div class="input-group">
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
                                 </span>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email" required="required" /></div>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" required="required" /></div>
                         </div>
                         <div class="form-group">
                             <label for="subject">
@@ -80,10 +100,11 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">
+                        <button type="submit" name ="submit" class="btn btn-primary pull-right" id="btnContactUs">
                             Send Message</button>
                     </div>
                 </div>
+                <?php echo $result; ?>
                 </form>
             </div>
         </div>
@@ -102,7 +123,7 @@
                 Coimbatore<br>
 				TamilNadu<br>
 				India<br>
-          	             
+
             </address>
             </form>
         </div>
@@ -111,6 +132,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <div class ="footertag">
+    </div>
   </body>
 </html>

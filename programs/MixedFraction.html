@@ -10,7 +10,8 @@
 
 
     <title>Programs</title>
- <!-- Bootstrap core CSS -->
+
+   <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
@@ -36,7 +37,6 @@
 <div class="navigation">
 </div>
 
-
     <div class="container">
     <div class="pg-header">
 
@@ -47,50 +47,72 @@
 
 		<div class="program1">
 
-            <h2>To reverse a given number using corejava</h2><br>
-			    <div class="codeblock"><textarea name="code" class="java"  readonly width="800" height="800">
+            <h2>Converting an improper fraction to a mixed fraction</h2><br>
+			    <div class="codeblock"><textarea name="code" class="java" readonly>
 
 package com.codedecimals;
 
 import java.util.Scanner;
 
-public class NumberReverse {
+public class Fraction
+{
+public static void main(String[] args)
 
-  public static void main(String[] args)
-  {
-    Scanner s=new Scanner(System.in);
-    int x,y;
+{
 
+int x,y;
 
-    System.out.print("Enter the number: ");
-    x=s.nextInt();
-    y=x;
+Scanner s = new Scanner(System.in);
+System.out.println();
+System.out.print("Enter the numerator other than zero and negative integer: ");
+x=s.nextInt();
+System.out.println();
+System.out.print("Enter the denominator other than zero and negative integer: ");
+y=s.nextInt();
+System.out.println();
+if(x < y)
+{
+System.out.println("Numerator must be greater than denominator for improper fractions. Please enter a value of x greater than y.");
+System.out.println();
+System.out.print("x = "+ " ");
+x=s.nextInt();
+}
+System.out.println();
+System.out.print("The improper fraction is: " +  x);
+System.out.print("/"+y);
+System.out.println();
+System.out.println();
 
-    int reverse=0;
-    int temp=1;
+int quotient,remainder;
 
-    int count=0;
+quotient=(x/y);
+remainder=1;
 
-    while(x>0)
-    {
-      x=x/10;
-      count++;
-    }
-
-    for(int i=0;i<count;i++)
-    {
-      reverse=(reverse*10)+y%10;
-      y=y/10;
-      temp=temp*10;
-
-
-    }
-
-    System.out.println("The reverse of the number " + x + " is: " + reverse);
-  }
-
+for(int i=0;i<99;i++)
+{
+if((quotient * y ) + i == x)
+{
+remainder=i;
+break;
+}
+}
+if (remainder==0)
+{
+System.out.println("The quotient is: " + quotient);
+System.out.println();
+System.out.println();
+}
+else
+{
+System.out.print("The mixed fraction is: " + quotient);
+System.out.print(" "+remainder+"/"+y);
+System.out.println();
+System.out.println();
 
 }
+}
+}
+    
 
 
 </textarea></div>
