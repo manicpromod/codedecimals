@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Programs</title>
+
+   <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/index.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/index.js"></script>
+
+    </head>
+
+    <body>
+
+      <div class="navigation">
+      </div>
+
+    <div class="container">
+    <div class="pg-header">
+
+      </div>
+      <div class="row">
+
+		<div class="program_list">
+
+		<div class="program1">
+
+            <h3>To find the sum of Triangle Numbers using Recursion</h3><br>
+			    <div class="codeblock"><textarea name="code" class="java" readonly>
+
+package com.codedecimals;
+
+
+import java.util.Scanner;
+
+public class TriangleNumbers
+
+{
+ public static void main(String[] args) {
+  int n;
+  Scanner s = new Scanner(System.in);
+
+  System.out.print("Enter the value of series no: ");
+  n = s.nextInt();
+  int sum = triangleNum(n);
+
+  System.out.println("The sum of triangle numbers of " + n + " series is: " + sum);
+
+
+ }
+
+ public static int triangleNum(int m) {
+  if (m == 1) {
+   return 1;
+  } else
+
+  {
+   return (m + triangleNum(m - 1));
+
+  }
+
+ }
+}
+
+</textarea></div>
+
+       </div>
+      </div>
+	  </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  </body>
+</html>

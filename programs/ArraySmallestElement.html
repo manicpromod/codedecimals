@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title>Programs</title>
+
+   <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/index.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../js/ie-emulation-modes-warning.js"></script>
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../js/index.js"></script>
+
+    </head>
+
+    <body>
+
+      <div class="navigation">
+      </div>
+
+    <div class="container">
+    <div class="pg-header">
+
+      </div>
+      <div class="row">
+
+		<div class="program_list">
+
+		<div class="program1">
+
+            <h3>smallest element in a array</h3><br>
+			    <div class="codeblock"><textarea name="code" class="java" readonly>
+
+package com.codedecimals;
+
+public class ArraySmallestNumber
+
+{
+
+ public static void main(String[] args)
+
+ {
+  // initialzie the array
+
+  int[] x = {
+   11,
+   3,
+   5,
+   1,
+   8,
+   6,
+   4,
+   2
+  };
+  System.out.println(x.length);
+
+  for (int i = 0; i < x.length; i++) {
+   System.out.print(x[i] + " ");
+  }
+
+  System.out.println();
+
+
+  int smallNumber = 0;
+  int i;
+
+  // compare the first two elements to initialize the smallNumber and based on that compare the smallNumber with every element of the array
+
+  for (i = 0; i < x.length - 1; i++) {
+   if (i == 0) {
+    if (x[i] < x[i + 1]) {
+     smallNumber = x[i];
+     continue;
+    } else {
+     smallNumber = x[i + 1];
+     continue;
+    }
+   }
+
+   if (smallNumber > x[i + 1]) {
+    smallNumber = x[i + 1];
+    continue;
+   }
+
+  }
+
+  System.out.println("The smallest number in the array is: " + smallNumber);
+
+ }
+
+
+}
+
+
+
+</textarea></div>
+
+       </div>
+      </div>
+	  </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+  </body>
+</html>
