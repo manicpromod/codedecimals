@@ -3,7 +3,7 @@
 $(document).ready(function () {
 
 //header changes
-$('.navigation').append('<nav class="navbar navbar-inverse navbar-fixed-top"><div class="container">		<div class="navbar-header">			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">				<span class="sr-only">Toggle navigation</span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>			</button>			<a class="navbar-brand">CodeDecimals</a>		</div>		<div id="navbar" class="collapse navbar-collapse">			<ul class="nav navbar-nav">				<li id="indexm"><a href="/index.html">Home</a></li>				<li id="javam"><a href="/html/CoreJava.html">Core Java</a></li>			<li id="J2EEm"><a href="/html/J2EE.html">J2EE</a></li>			<li id="bigdatam"><a href="/html/BigData.html">Big Data</a></li>						<li id="dsam"><a href="/html/DSA.html">DSA</a></li>				<li id="programsm"><a href="/html/Programs.html">Programs</a></li>				<li id="interviewm"><a href="/html/Interview.html">Interview</a></li>			<li id="testm"><a href="/html/Test.html">Test</a></li>		<li id="contactm"><a href="/html/Contact.php">Contact</a></li>	</ul>	</div> </div> </nav>');
+$('.navigation').append('<nav class="navbar navbar-inverse navbar-fixed-top"><div class="container">		<div class="navbar-header">			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">				<span class="sr-only">Toggle navigation</span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>				<span class="icon-bar"></span>			</button>			<a class="navbar-brand">CodeDecimals</a>		</div>		<div id="navbar" class="collapse navbar-collapse">			<ul class="nav navbar-nav">				<li id="indexm"><a href="/index.html">Home</a></li>				<li id="javam"><a href="/html/CoreJava.html">Core Java</a></li>			<li id="J2EEm"><a href="/html/J2EE.html">J2EE</a></li>			<li id="bigdatam"><a href="/html/BigData.html">Big Data</a></li>						<li id="dsam"><a href="/html/DSA.html">DSA</a></li>		<li id="dpm"><a href="/html/DesignPatterns.html">Design Patterns</a></li> <li id="programsm"><a href="/html/Programs.html">Programs</a></li>				<li id="interviewm"><a href="/html/Interview.html">Interview</a></li>			<li id="testm"><a href="/html/Test.html">Test</a></li>		<li id="contactm"><a href="/html/Contact.php">Contact</a></li>	</ul>	</div> </div> </nav>');
 
 var titleval=$("head title").text();
 console.log(titleval);
@@ -41,6 +41,9 @@ if(titleval == 'Programs') {
 }else if(titleval == 'Test') {
 
 	$('#testm').addClass("active");
+}else if(titleval == 'DesignPatterns') {
+
+	$('#dpm').addClass("active");
 }
 
 

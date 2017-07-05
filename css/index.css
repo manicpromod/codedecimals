@@ -134,3 +134,6 @@ img {
 .submitbutton{
   padding-top: 20px;
 }
+a {
+  text-decoration: none;
+}
