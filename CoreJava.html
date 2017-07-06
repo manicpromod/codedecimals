@@ -9,7 +9,7 @@
     <meta name="author" content="">
 
 
-    <title>J2EE</title>
+    <title>Java</title>
 
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -47,20 +47,67 @@
 				<h3> Introduction</h3>
 
 				<div class="details">
-					J2EE is nothing but Java Enterprise Edition which deals with JSP, Servlets and EJB technology.
+					Java is a object oriented and platform independent language. In Java 8, functional programming has been introducted.
+					Java is very powerful server side programming language and it is a very popular language.
 
 				</div>
 				<div class="emptyspace">
 				</div>
+				<h4>Code Example </h4>
+        <div> Lets take a simple java program
+        </div>
+				<div class="codeblock"><textarea readonly name="code" class="java">
 
+package com.codedecimals.java;
+
+import java.util.*;
+
+/**
+***********************************************
+*This Program deals with Sum of two arrays
+***********************************************
+**/
+
+public class ArraySum {
+
+		public static void main(String[] args)
+		{
+
+      //Declaring an array of integers
+			int[] x={2,4,3,1,8,7,6,9};
+			System.out.print("Array is: " );
+
+      //Iterate through the array
+			for(int i=0;i<x.length;i++)
+			{
+				System.out.print(x[i] + " ");
+			}
+			System.out.println();
+			System.out.println(x.length);
+
+			int sum=0;
+
+      //Add the array of integers through iteration
+
+			for(int i=0;i<x.length;i++)
+			{
+				sum=sum+x[i];
+			}
+
+			System.out.println("The sum of array elements is: " + sum);
+		}
+
+}
+
+</textarea></div>
     <div id="oops">
-    <h3> J2EE Archiecture</h3>
+    <h3> OOPS Concepts</h3>
     <div class="details">
-    Below image shows the J2EE Archiecture
+    Below image shows the list of oops concepts that can be implemented using Java.
 
     </div>
     <div class="image">
-      <img src="../images/J2EE.gif">
+      <img src="../images/oops.png">
     </div>
       </div>
       </div>
@@ -70,13 +117,14 @@
             <h4>Topics</h4>
 			<div class="list-group">
 			  <a href="#" class="list-group-item active">Introduction</a>
-			  <a href="#oops" class="list-group-item list-group-item-action">Servlets</a>
-			  <a href="corejava/multithreading.html" class="list-group-item list-group-item-action">JSP</a>
-			  <a href="#" class="list-group-item list-group-item-action">EJB</a>
-			  <a href="#" class="list-group-item list-group-item-action">SPRING</a>
-			  <a href="#" class="list-group-item list-group-item-action">Hibernate</a>
-			  <a href="#" class="list-group-item list-group-item-action">RESTful</a>
-			</div>
+			  <a href="#oops" class="list-group-item list-group-item-action">Oops concepts</a>
+			  <a href="corejava/multithreading.html" class="list-group-item list-group-item-action">Multithreading</a>
+			  <a href="#" class="list-group-item list-group-item-action">Networking</a>
+			  <a href="#" class="list-group-item list-group-item-action">I/O Operations</a>
+			  <a href="#" class="list-group-item list-group-item-action">Searlization</a>
+			  <a href="#" class="list-group-item list-group-item-action">Collections</a>
+			  <a href="#" class="list-group-item list-group-item-action">Exception Handling</a>
+			  			</div>
           </div>
           </div>
         </div><!-- /.blog-sidebar -->
@@ -84,7 +132,7 @@
     <div class="navigationclass">
   <nav>
     <ul class="pager">
-        <li><a href="#">Next</a></li>
+        <li><a href="CoreJava/multithreading.html">Next</a></li>
     </ul>
   </nav>
     </div>
