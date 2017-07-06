@@ -10,32 +10,33 @@
 
 
     <title>Programs</title>
-
-   <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+ <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../js/ie-emulation-modes-warning.js"></script>
+    <script src="../../js/ie-emulation-modes-warning.js"></script>
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../js/index.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
 </head>
 
 
 <body>
 <div class="navigation">
 </div>
+
 
     <div class="container">
     <div class="pg-header">
@@ -47,42 +48,50 @@
 
 		<div class="program1">
 
-            <h2>to display 1 11 111 1111..</h2><br>
-			    <div class="codeblock"><textarea name="code" class="java" readonly>
+            <h2>To reverse a given number using corejava</h2><br>
+			    <div class="codeblock"><textarea name="code" class="java"  readonly width="800" height="800">
 
 package com.codedecimals;
 
 import java.util.Scanner;
 
-public class DecimalPoint {
-    
-    public static void main(String[] args)
+public class NumberReverse {
+
+  public static void main(String[] args)
+  {
+    Scanner s=new Scanner(System.in);
+    int x,y;
+
+
+    System.out.print("Enter the number: ");
+    x=s.nextInt();
+    y=x;
+
+    int reverse=0;
+    int temp=1;
+
+    int count=0;
+
+    while(x>0)
     {
-        
-        int number=1;
-        int x;
-        Scanner s=new Scanner(System.in);
-        
-        // get the input from the user
-        
-        System.out.print("Enter the series: " );
-        x=s.nextInt();
-        int temp=1;
-        
-        for(int i=0;i<x;i++)
-        {
-            System.out.println(number);
-            number=number+(temp*10);
-            temp=temp*10;
-        }
-        
-    
-        
-        
+      x=x/10;
+      count++;
     }
 
-}
+    for(int i=0;i<count;i++)
+    {
+      reverse=(reverse*10)+y%10;
+      y=y/10;
+      temp=temp*10;
 
+
+    }
+
+    System.out.println("The reverse of the number " + x + " is: " + reverse);
+  }
+
+
+}
 
 
 </textarea></div>
@@ -97,6 +106,7 @@ public class DecimalPoint {
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <div class ="footertag">
+    </div>
   </body>
 </html>

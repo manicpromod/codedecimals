@@ -12,25 +12,25 @@
     <title>Programs</title>
 
    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../js/ie-emulation-modes-warning.js"></script>
+    <script src="../../js/ie-emulation-modes-warning.js"></script>
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/index.js"></script>
-
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../js/index.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
     </head>
 
     <body>
@@ -48,48 +48,70 @@
 
 		<div class="program1">
 
-            <h3>To display the Fibonacci Series</h3><br>
+            <h3>smallest element in a array</h3><br>
 			    <div class="codeblock"><textarea name="code" class="java" readonly>
 
 package com.codedecimals;
 
-import java.util.Scanner;
+public class ArraySmallestNumber
 
-public class Fibonacci {
- public static void main(String[] args) {
-  Scanner s = new Scanner(System.in);
+{
 
-  int series;
-  int x, y;
-  int temp = 0;
+ public static void main(String[] args)
 
-  // get the input from the user for the number of series
+ {
+  // initialzie the array
 
-  System.out.print("Enter the number of Series: ");
-  series = s.nextInt();
-  System.out.println();
-  System.out.println("Enter the first two numbers of the series");
-  System.out.println();
-  System.out.print("x: ");
-  x = s.nextInt();
-  System.out.println();
-  System.out.print("y: ");
-  y = s.nextInt();
-  System.out.println();
-  System.out.print(x + " " + y + " ");
+  int[] x = {
+   11,
+   3,
+   5,
+   1,
+   8,
+   6,
+   4,
+   2
+  };
+  System.out.println(x.length);
 
-  // since x and y are printed once before the loop, total series printed in the loop is two less than the series
-
-  int i;
-  for (i = 0; i < series - 2; i++) {
-   temp = x + y;
-   System.out.print(temp + " ");
-   x = y;
-   y = temp;
+  for (int i = 0; i < x.length; i++) {
+   System.out.print(x[i] + " ");
   }
+
   System.out.println();
+
+
+  int smallNumber = 0;
+  int i;
+
+  // compare the first two elements to initialize the smallNumber and based on that compare the smallNumber with every element of the array
+
+  for (i = 0; i < x.length - 1; i++) {
+   if (i == 0) {
+    if (x[i] < x[i + 1]) {
+     smallNumber = x[i];
+     continue;
+    } else {
+     smallNumber = x[i + 1];
+     continue;
+    }
+   }
+
+   if (smallNumber > x[i + 1]) {
+    smallNumber = x[i + 1];
+    continue;
+   }
+
+  }
+
+  System.out.println("The smallest number in the array is: " + smallNumber);
+
  }
+
+
 }
+
+
 
 </textarea></div>
 
@@ -103,6 +125,7 @@ public class Fibonacci {
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <div class ="footertag">
+    </div>
   </body>
 </html>

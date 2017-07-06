@@ -10,32 +10,33 @@
 
 
     <title>Programs</title>
- <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../js/ie-emulation-modes-warning.js"></script>
+    <script src="../../js/ie-emulation-modes-warning.js"></script>
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/index.js"></script>
-</head>
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../js/index.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+    </head>
 
+    <body>
 
-<body>
-<div class="navigation">
-</div>
-
+      <div class="navigation">
+      </div>
 
     <div class="container">
     <div class="pg-header">
@@ -47,51 +48,42 @@
 
 		<div class="program1">
 
-            <h2>To reverse a given number using corejava</h2><br>
-			    <div class="codeblock"><textarea name="code" class="java"  readonly width="800" height="800">
+            <h3>To find the sum of Triangle Numbers using Recursion</h3><br>
+			    <div class="codeblock"><textarea name="code" class="java" readonly>
 
 package com.codedecimals;
 
+
 import java.util.Scanner;
 
-public class NumberReverse {
+public class TriangleNumbers
 
-  public static void main(String[] args)
+{
+ public static void main(String[] args) {
+  int n;
+  Scanner s = new Scanner(System.in);
+
+  System.out.print("Enter the value of series no: ");
+  n = s.nextInt();
+  int sum = triangleNum(n);
+
+  System.out.println("The sum of triangle numbers of " + n + " series is: " + sum);
+
+
+ }
+
+ public static int triangleNum(int m) {
+  if (m == 1) {
+   return 1;
+  } else
+
   {
-    Scanner s=new Scanner(System.in);
-    int x,y;
+   return (m + triangleNum(m - 1));
 
-
-    System.out.print("Enter the number: ");
-    x=s.nextInt();
-    y=x;
-
-    int reverse=0;
-    int temp=1;
-
-    int count=0;
-
-    while(x>0)
-    {
-      x=x/10;
-      count++;
-    }
-
-    for(int i=0;i<count;i++)
-    {
-      reverse=(reverse*10)+y%10;
-      y=y/10;
-      temp=temp*10;
-
-
-    }
-
-    System.out.println("The reverse of the number " + x + " is: " + reverse);
   }
 
-
+ }
 }
-
 
 </textarea></div>
 
@@ -105,6 +97,7 @@ public class NumberReverse {
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <div class ="footertag">
+    </div>
   </body>
 </html>

@@ -12,31 +12,31 @@
     <title>Programs</title>
 
    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="../../css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="../css/index.css" rel="stylesheet">
+    <link href="../../css/index.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../js/ie-emulation-modes-warning.js"></script>
+    <script src="../../js/ie-emulation-modes-warning.js"></script>
 
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../js/ie10-viewport-bug-workaround.js"></script>
-    <script src="../js/index.js"></script>
+    <script src="../../js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../js/index.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet"/>
+</head>
 
-    </head>
 
-    <body>
-
-      <div class="navigation">
-      </div>
+<body>
+<div class="navigation">
+</div>
 
     <div class="container">
     <div class="pg-header">
@@ -48,39 +48,42 @@
 
 		<div class="program1">
 
-            <h3>Sum of array elements</h3><br>
+            <h2>to display 1 11 111 1111..</h2><br>
 			    <div class="codeblock"><textarea name="code" class="java" readonly>
-
-
 
 package com.codedecimals;
 
-public class ArraySum 
+import java.util.Scanner;
 
-{
+public class DecimalPoint {
 
     public static void main(String[] args)
     {
-        int[] x={2,4,3,1,8,7,6,9};
-        System.out.print("Array is: " );
-        for(int i=0;i<x.length;i++)
+
+        int number=1;
+        int x;
+        Scanner s=new Scanner(System.in);
+
+        // get the input from the user
+
+        System.out.print("Enter the series: " );
+        x=s.nextInt();
+        int temp=1;
+
+        for(int i=0;i<x;i++)
         {
-            System.out.print(x[i] + " ");
-        }
-        System.out.println();
-        System.out.println(x.length);
-
-        int sum=0;
-
-        for(int i=0;i<x.length;i++)
-        {
-            sum=sum+x[i];
+            System.out.println(number);
+            number=number+(temp*10);
+            temp=temp*10;
         }
 
-        System.out.println("The sum of array elements is: " + sum);
+
+
+
     }
 
 }
+
 
 
 </textarea></div>
@@ -95,6 +98,7 @@ public class ArraySum
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
+    <div class ="footertag">
+    </div>
   </body>
 </html>
