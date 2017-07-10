@@ -116,8 +116,7 @@
                 <strong>CodeDecimals, Inc.</strong><br>
                 South Salt Lake<br>
 				Utah-84119<br>
-				USA<br>
-           	<a href="mailto:#">admin@codedecimals.com</a>
+				USA<br>           	
             </address>
             <address>
                <strong>CodeDecimals, Inc.</strong><br>
