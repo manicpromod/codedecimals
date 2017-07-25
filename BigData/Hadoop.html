@@ -47,7 +47,7 @@
 				<h3> Hadoop</h3>
 
 				<div class="details">
-					Hadoop is a open source framework to process and store large amount of data.Doug Cutting coined the word Hadoop since it was named after his kid gave a name to the yellow elephant doll.
+					Hadoop is a open source framework to process and store large amount of data.Doug Cutting who is the founder of hadoop coined the word Hadoop after his kid's yellow elephant doll.
 				</div>
 				<div class="emptyspace">
 				</div>
@@ -62,11 +62,29 @@
       <img src="../../images/Hadoop.png">
     </div>
       </div>
+      <div>
+        Hadoop ecosystem contains hdfs,YARN,MapReduce and other tools which will support the data analysis and processing.
+        <h2>HDFS</h2>
+        <p>Hadoop provides HDFS (Hadoop Distributed File System) which is a framework for the data analysis and trasformation for large set of data.
+          There are majorily four components including Namenode, DataNode, Job Tracker and Task Tracker.
+        <h3>NameNode</h3>
+        <p>NameNode is a node which stores metadata of the the filesystem. It contains information such as which blocks are stored in which datanode,file maps to the block locations.
+          The namenode maintains two in-memory tables, one which maps the blocks to datanodes (one block maps to 3 datanodes for a replication value of 3) and a datanode to block number mapping.
+
+          <h3>DataNode</h3>
+          <p>Datanode is the node which stores the actual data. All datanode sends the heartbeat to the namenode for every 3 seconds.If the namenode does not receives any heartbeat from the datanode for more than 10 minutes
+            then this data node is considered as dead and hence it initiates the replica of datanode to the other datanodes. Every data is replicated into 3 datanodes.
+            <h3>JobTracker</h3>
+            <p>The primary responsibility of the job tracker is resource management.It manages all the task trackers by assigning the tasks,tracking the progress,fault tolerance etc.
+            <h3>TaskTracker</h3>
+            <p3>The task tracker has a simple function of following the orders of the job tracker and updating the job tracker with its progress status periodically.
+              
+      </div>
       </div>
 	  <div class="col-sm-2 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module">
 			<div class="sidebar-module-inside">
-          
+
             <div class="list-group">
               <a href="#" class="list-group-item">Introduction</a>
               <a href="#" class="list-group-item active list-group-item-action">Hadoop</a>
